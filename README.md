@@ -5,4 +5,4 @@ Expense Tracker Application
 It is a Native based Android Application
 Created Using JAVA and Sqlite for database
 
-Screenshots
+Screenshots of application are in above Screenshots folder 
