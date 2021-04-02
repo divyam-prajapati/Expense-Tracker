@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:layout_margin="24dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:id="@+id/ba"
+        android:background="@drawable/bg_rec_ba"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_marginEnd="4dp"
+        android:alpha="0.9">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ba"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/rubik_semi_bold_italic"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/total_ba_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_amount"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/rubik_medium"
+            android:drawableStart="@drawable/ic_rupee_sign_b"
+            android:drawablePadding="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:id="@+id/cc"
+        android:background="@drawable/bg_rec_cc"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_marginHorizontal="4dp"
+        android:alpha="0.9">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cc"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/rubik_semi_bold_italic"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/total_cc_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_amount"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/rubik_medium"
+            android:drawableStart="@drawable/ic_rupee_sign_b"
+            android:drawablePadding="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:id="@+id/ca"
+        android:background="@drawable/bg_rec_ca"
+        android:orientation="vertical"
+        android:layout_marginStart="4dp"
+        android:padding="8dp"
+        android:alpha="0.9">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ca"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/rubik_semi_bold_italic"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/total_ca_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_amount"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/rubik_medium"
+            android:drawableStart="@drawable/ic_rupee_sign_b"
+            android:drawablePadding="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+</LinearLayout>

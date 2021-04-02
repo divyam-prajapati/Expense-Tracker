@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".GraphView">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/graph_view_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:elevation="4dp"
+        app:theme="@style/ToolbarTheme"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:id="@+id/graph_view_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/graph_view"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <org.eazegraph.lib.charts.PieChart
+        android:id="@+id/pie_chart"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_below="@id/graph_view_toolbar"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        app:egInnerPaddingColor="@color/colorPrimaryDark"
+        app:egInnerPadding="85"/>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        app:cardCornerRadius="10dp"
+        android:layout_below="@id/pie_chart"
+        android:layout_margin="16dp">
+
+        <LinearLayout
+            android:id="@+id/graph_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="16dp">
+
+            <TextView
+                android:id="@+id/ring_ba"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ba"
+                android:textSize="16sp"
+                android:fontFamily="@font/rubik_medium"
+                android:textColor="@color/colorAccent"
+                android:drawableStart="@drawable/color_ba"
+                android:drawablePadding ="8dp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/ring_cc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cc"
+                android:textSize="16sp"
+                android:fontFamily="@font/rubik_medium"
+                android:textColor="@color/colorAccent"
+                android:drawableStart="@drawable/color_cc"
+                android:drawablePadding ="8dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/ring_ca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ca"
+                android:textSize="18sp"
+                android:fontFamily="@font/rubik_medium"
+                android:textColor="@color/colorAccent"
+                android:drawableStart="@drawable/color_ca"
+                android:drawablePadding ="8dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/ring_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/xpense_amount"
+                android:textSize="18sp"
+                android:fontFamily="@font/rubik_medium"
+                android:textColor="@color/colorAccent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="end"
+            android:layout_marginHorizontal="48dp"
+            android:layout_marginVertical="16dp">
+
+            <TextView
+                android:id="@+id/ba_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dummy_amount"
+                android:textSize="18sp"
+                android:fontFamily="@font/rubik_medium"
+                android:textColor="@color/colorAccent"
+                android:layout_gravity="start"
+                android:drawableStart="@drawable/ic_rupee_sign"
+                android:drawablePadding="8dp"/>
+
+
+
+            <TextView
+                android:id="@+id/cc_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dummy_amount"
+                android:textSize="18sp"
+                android:fontFamily="@font/rubik_medium"
+                android:textColor="@color/colorAccent"
+                android:layout_gravity="start"
+                android:layout_marginTop="16dp"
+                android:drawableStart="@drawable/ic_rupee_sign"
+                android:drawablePadding="8dp"/>
+
+            <TextView
+                android:id="@+id/ca_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dummy_amount"
+                android:textSize="18sp"
+                android:fontFamily="@font/rubik_medium"
+                android:textColor="@color/colorAccent"
+                android:layout_gravity="start"
+                android:layout_marginTop="16dp"
+                android:drawableStart="@drawable/ic_rupee_sign"
+                android:drawablePadding="8dp"/>
+
+            <TextView
+                android:id="@+id/total_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dummy_amount"
+                android:textSize="18sp"
+                android:fontFamily="@font/rubik_medium"
+                android:textColor="@color/colorAccent"
+                android:layout_gravity="start"
+                android:layout_marginTop="16dp"
+                android:drawableStart="@drawable/ic_rupee_sign"
+                android:drawablePadding="8dp"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

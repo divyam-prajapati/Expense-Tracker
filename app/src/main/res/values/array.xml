@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- These are the options displayed in the category drop-down Spinner -->
+    <string-array
+        name="array_category_options">
+
+        <item>@string/enter_category</item>
+        <item>@string/ca</item>
+        <item>@string/cc</item>
+        <item>@string/ba</item>
+
+    </string-array>
+
+</resources>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/activity_main"
+    android:background="@color/colorPrimaryDark">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:elevation="4dp"
+        app:theme="@style/ToolbarTheme"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/my_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dashboard"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/intro"
+        android:orientation="vertical"
+        android:layout_below="@id/my_toolbar"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/welcome_back"
+            android:text="@string/welcome"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            android:alpha="0.5"
+            android:fontFamily="@font/rubik_italic"/>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/overview"
+        layout="@layout/overview"
+        android:layout_below="@id/intro"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"/>
+
+    <LinearLayout
+        android:id="@+id/total_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/overview"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_rec_b"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/balance_amount"
+            android:text="@string/dummy_balance_amount"
+            android:textSize="32sp"
+            android:textColor="#FF958F"
+            android:fontFamily="@font/rubik_medium"
+            android:drawableStart="@drawable/ic_rupee_sign_c"
+            android:drawablePadding="4dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/xpense_amount"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:alpha="0.6"
+            android:fontFamily="@font/rubik_semi_bold_italic"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/recent_transactions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/total_amount"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recent_transactions_title"
+            android:text="@string/recent_transactions"
+            android:textSize="24sp"
+            android:fontFamily="@font/rubik_medium"
+            android:textColor="@color/colorAccent"
+            android:layout_marginHorizontal="16dp"
+            android:layout_gravity="top"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/main_screen_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/empty_view_ms"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/data_not_found"
+            android:layout_gravity="center"
+            android:padding="24dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floating_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/fab_content_desc"
+        app:srcCompat="@drawable/ic_add_24"
+        android:backgroundTint="@color/colorPrimary"
+        app:borderWidth="0dp"
+        app:rippleColor="@color/colorAccent"
+        android:elevation="12dp"/>
+
+</RelativeLayout>
